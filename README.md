@@ -2,7 +2,7 @@
 An intelligent coding companion that generates code from natural language prompts and then explains the generated code to the user in an easy-to-understand language. 
 Additionally, it can also assist in debugging and code correction. 
 ## Project Status
-In development - Module 1 in progress
+In development - Module 3 in progress along with a few developments ongoing in module 1
 ## Modules
 **Module 1:** Natural Language Understanding (NLU) Pipeline  
 The NLU module is the entry point of CodeBud. Before any code can be generated, the system must first understand what the user is asking — this is Module 1's job.
@@ -18,7 +18,8 @@ This structured output is then passed downstream to the code generation engine.
 *Module 1 achieves 97.64% intent classification accuracy on the SNIPS test set (1,400 samples, 7 intent classes).*  
   
 **Module 2:** Code Generation Engine  
-  Generates syntactically correct, multi-language code from structured intent and slot inputs extracted by the NLU module  
+  Generates syntactically correct, multi-language code from structured intent and slot inputs extracted by the NLU module.  
+  RAG pipeline along with external API key being used for code generation. RAG system retrieves relevant code/knowledge-base context and then uses the Groq LLM for generation.  
 **Module 3:** Code Explanation  
   Explains generated code line by line in beginner-friendly language  
 **Module 4:** Debugging Assistant  
